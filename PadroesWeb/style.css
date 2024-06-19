@@ -1,0 +1,112 @@
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/pixelarte.avif');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #00ff7b;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: relative; /* Garante que a posição absoluta da logo seja relativa ao header */
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+#megaMan {
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: 80px; /* Ajuste o tamanho conforme necessário */
+    background-image: url('img/gif.gif'); /* Caminho para a animação do Mega Man */
+    background-size: cover; /* Ajusta o tamanho da imagem de fundo para cobrir o elemento */
+    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer; /* Altera o cursor ao passar sobre o boneco */
+    transition: transform 0.2s ease; /* Efeito de transição no movimento */
+}
+
+@keyframes moveMegaMan {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100vw); /* Move o Mega Man para a direita até o final da tela */
+    }
+    51% {
+        transform: translateX(-100000000vw); /* Move rapidamente para a esquerda, fora da tela */
+    }
+    100% {
+        transform: translateX(0); /* Retorna rapidamente para a posição inicial */
+    }
+}
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+    color: #00ff7b;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+section {
+    margin: 20px 0;
+    text-align: left;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #666;
+    font-family: 'Oswald', sans-serif;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    color: #00d68f;
+    text-decoration: none;
+    border-bottom: 1px dashed #00d68f;
+    transition: border-bottom 0.3s ease;
+}
+
+a:hover {
+    border-bottom-color: transparent;
+}
+
+.tiny5-regular {
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
